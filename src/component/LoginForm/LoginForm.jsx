@@ -27,7 +27,7 @@ const LoginForm = () => {
     }
   };
   const conditionPass = () => {
-    if (d?.Password.length >= 8) {
+    if (d?.Password.length <= 8) {
       setPass("Pass is OK");
     } else {
       setPass("Pass is not ok");

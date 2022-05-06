@@ -31,8 +31,12 @@ button:hover {
 }
 
 .correct {
-  color: green;
+  color: black;
+
   font-weight: bold;
+  margin-bottom: 20px;
+
+  padding: 20px;
 }
 .wrong {
   color: red;
