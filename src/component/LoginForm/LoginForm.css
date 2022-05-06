@@ -2,14 +2,16 @@
   display: flex;
   flex-direction: column;
   width: 350px;
-  margin: 150px auto;
+  margin: auto;
 }
 input {
   border: none;
-  border: 2px solid black;
+  border: 2px solid white;
   border-radius: 5px;
   margin-bottom: 20px;
   padding: 14px;
+  font-size: 20px;
+  outline: none;
 }
 .lastChild {
   margin-bottom: 40px;
@@ -27,18 +29,34 @@ button {
 }
 button:hover {
   cursor: pointer;
-  box-shadow: 0 0 10px goldenrod;
+  box-shadow: 0 0 10px white;
 }
 
 .correct {
-  color: black;
-
+  color: white;
   font-weight: bold;
   margin-bottom: 20px;
-
   padding: 20px;
+}
+.pass {
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+}
+.more {
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+}
+.inputEmail,
+.inputPass {
+  text-align: left;
 }
 styles.wrong {
   color: red;
   font-weight: bold;
+}
+p {
+  color: white;
+  font-weight: 700;
 }

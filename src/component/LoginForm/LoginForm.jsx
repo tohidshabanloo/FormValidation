@@ -1,5 +1,5 @@
 import React from "react";
-import  "./LoginForm.css";
+import "./LoginForm.css";
 import { useState } from "react";
 
 const useForm = (initialData) => {
@@ -57,9 +57,10 @@ const LoginForm = () => {
   //   console.log(d.Password);
   return (
     <div className="content">
+      <p className="inputEmail">Email:</p>
       <input value={d?.Email} onChange={hc("Email")} type="text" />
       <div className="correct">{show}</div>
-
+      <p className="inputPass">Password:</p>
       <input
         value={d?.Password}
         onChange={handlePass}
@@ -67,8 +68,8 @@ const LoginForm = () => {
         type="text"
       />
 
-      <div>{pass}</div>
-      <div>{more}</div>
+      <div className="pass">{pass}</div>
+      <div className="more">{more}</div>
 
       <button onClick={finalFunc}> SUBMIT</button>
     </div>
