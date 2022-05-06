@@ -21,9 +21,9 @@ const LoginForm = () => {
   const [d, hc] = useForm({ Email: "", Password: "" });
   const condition = () => {
     if (d?.Email.includes("@") && d?.Email.includes(".com")) {
-      setShow("OK");
+      setShow("Email is OK");
     } else {
-      setShow("ERROR");
+      setShow("Email is not ERROR");
     }
   };
   const conditionPass = () => {
@@ -33,9 +33,17 @@ const LoginForm = () => {
       setPass("Pass is not ok");
     }
   };
+  const conditionPass16 = () => {
+    if (d?.Password.length <= 16) {
+      setPass("Pass is Less than 16");
+    } else {
+      setPass("Pass is more than 16");
+    }
+  };
   const finalFunc = () => {
     condition();
     conditionPass();
+    conditionPass16();
   };
 
   //   console.log(d.Password);
