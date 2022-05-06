@@ -38,7 +38,7 @@ button:hover {
 
   padding: 20px;
 }
-.wrong {
+styles.wrong {
   color: red;
   font-weight: bold;
 }
