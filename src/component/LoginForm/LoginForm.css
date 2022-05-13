@@ -1,4 +1,5 @@
 .content {
+  padding-top: 80px;
   display: flex;
   flex-direction: column;
   width: 350px;
@@ -21,7 +22,7 @@ button {
   margin: 30px auto;
   padding: 14px;
   border: none;
-  background-color: blueviolet;
+  background-color: #002561;
   color: white;
   font-size: 21px;
   font-weight: 700;

@@ -2,6 +2,7 @@ import React from "react";
 import "./LoginForm.css";
 import { useState } from "react";
 import { useRef } from "react";
+import { Link, useNavigate, Navigate } from "react-router-dom";
 
 const useForm = (initialData) => {
   const [data, setData] = useState(initialData);
@@ -55,14 +56,20 @@ const LoginForm = () => {
     conditionPass();
     conditionPass16();
   };
-  const refHandeler = () => {
-    console.log(inputRef, inputRef.current.value);
-  };
+  // const refHandeler = () => {
+  //   console.log(inputRef, inputRef.current.value);
+  // };
 
   //   console.log(d.Password);
+
+  const navigate = useNavigate();
+
+  const validation = (event) => {
+    event.preventDefault();
+  };
   return (
-    <div className="content">
-      <p className="inputEmail">Email:</p>
+    <div className="content" onClick={validation}>
+      <p className="inputEmail">Username:</p>
       <input value={d?.Email} onChange={hc("Email")} type="text" />
       <div className="correct">{show}</div>
       <p className="inputPass">Password:</p>
@@ -76,9 +83,16 @@ const LoginForm = () => {
       <div className="pass">{pass}</div>
       <div className="more">{more}</div>
 
-      <button onClick={finalFunc}> SUBMIT</button>
-      <input type="text" ref={inputRef} />
-      <button onClick={refHandeler}>RE REnder</button>
+      {/* <button>
+        <Navigate to="/" replace={true} />
+      </button> */}
+
+      <Link className="register" to="/Dashboard">
+        Signup
+      </Link>
+      {/* <button onClick={finalFunc}> SUBMIT</button> */}
+      {/* <input type="text" ref={inputRef} />
+      <button onClick={refHandeler}>RE REnder</button> */}
     </div>
   );
 };

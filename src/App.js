@@ -1,14 +1,21 @@
 import "./App.css";
-
-import Pedar from "./component/Pedar/Pedar";
-import Dokhtar from "./component/Dokhtar/Dokhtar";
+import LoginForm from "./component/LoginForm/LoginForm";
+import { Routes, Route } from "react-router-dom";
+import Home from "./component/Home/Home";
+import Dashboard from "./component/Dashboard/Dashboard";
 
 function App() {
   return (
     <div className="App">
-      {/* <LoginForm /> */}
+      <h1>Welcome to My Awesome Website!</h1>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/LoginForm" element={<LoginForm />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
+      </Routes>
+
       {/* <Pedar /> */}
-      <Dokhtar />
+      {/* <Dokhtar /> */}
       {/* <Ref /> */}
       {/* <Footer /> */}
     </div>
