@@ -1,10 +1,16 @@
-import './App.css';
-import Board from "./components/board/Board";
+import "./App.css";
+
+import Pedar from "./component/Pedar/Pedar";
+import Dokhtar from "./component/Dokhtar/Dokhtar";
 
 function App() {
   return (
     <div className="App">
-      <Board/>
+      {/* <LoginForm /> */}
+      {/* <Pedar /> */}
+      <Dokhtar />
+      {/* <Ref /> */}
+      {/* <Footer /> */}
     </div>
   );
 }
