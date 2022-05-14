@@ -1,14 +1,24 @@
-import React from "react";
-import "./Dashboard.css";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!window.localStorage.getItem("username")) {
+      navigate("/login", { replace: true });
+    }
+  }, []);
+
+  const logout = () => {
+    window.localStorage.removeItem("username");
+    navigate("/", { replace: true });
+  };
   return (
-    <div>
-      <Link className="register" to="/LoginForm">
-        Logout
-      </Link>
-    </div>
+    <>
+      <div>Dashboard</div>
+      <button onClick={logout}>logout</button>
+    </>
   );
 };
 

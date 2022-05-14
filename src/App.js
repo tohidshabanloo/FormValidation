@@ -10,8 +10,8 @@ function App() {
       <h1>Welcome to My Awesome Website!</h1>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/LoginForm" element={<LoginForm />} />
-        <Route path="/Dashboard" element={<Dashboard />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
 
       {/* <Pedar /> */}

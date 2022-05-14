@@ -2,22 +2,14 @@ import React from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
 
-
 const Home = () => {
+  const username = window.localStorage.getItem("username");
   return (
-    <div>
-      <br />
-      <br />
-      <br />
-      <Link className="register" to="/LoginForm">
-        Register Here
-      </Link>
-      <br />
-      <br />
-      <br />
-      {/* <button> LOG IN</button> */}
-      <div className="username">username</div>
-    </div>
+    <>
+      <div>Home</div>
+      <Link to="/login">Login</Link>
+      {username && <p>username:{username}</p>}
+    </>
   );
 };
 
